@@ -1,0 +1,19 @@
+{
+  "name": "clementgrenierdesrousseaux_3_0702021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClementGrenierDesrousseaux/ClementGrenierDesrousseaux_3_0702021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClementGrenierDesrousseaux/ClementGrenierDesrousseaux_3_0702021/issues"
+  },
+  "homepage": "https://github.com/ClementGrenierDesrousseaux/ClementGrenierDesrousseaux_3_0702021#readme"
+}
