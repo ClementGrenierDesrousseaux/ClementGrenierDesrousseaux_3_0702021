@@ -1,0 +1,116 @@
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$terciary-color: #99e2d0;
+$background-color: #f6f6f6;
+
+@mixin background_color {
+    background-color: $background-color;
+}
+
+@mixin flex-justify-align-center {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+@mixin text_decoration($text_color) {
+    text-decoration: none;
+    color: $text_color;
+}
+
+body {
+    font-family: "roboto";
+    margin: 0px;
+    width: 95%;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include background_color();
+    width: 100%;
+    &__localisation {
+        @include flex-justify-align-center();
+        background: linear-gradient(to top, darken($background-color, 5%), 95%, darken($background-color, 30%));
+        width: 100%;
+        & p {
+            margin-left: 10px;
+        }
+    }
+    &__bouton_exploration {
+        @include flex-justify-align-center();
+        color: white;
+        background: linear-gradient(to top left, #9356dc, 60%, #ff79da);
+        width: 250px;
+        height: 60px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px 10px;
+    }
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    & .bouton {
+        @include flex-justify-align-center();
+        &__numero {
+            background-color: yellow;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            @include flex-justify-align-center();
+            z-index: 2;
+        }
+        & i {
+            @include flex-justify-align-center();
+            padding-left: 20px;
+            margin-left: -10px;
+            background-color: pink;
+            height: 40px;
+            z-index: 1;
+            border-radius: 20px;
+            & p {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+.section {
+    @include background_color();
+}
+
+.footer {
+    background-color: #353535;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__logo {
+        font-family: "Shrikhand";
+        color: white;
+    }
+    &__restaurant i {
+        @include flex-justify-align-center();
+        & p {
+            padding-left: 10px;
+        }
+    }
+    &__partenaire i {
+        @include flex-justify-align-center();
+        & p {
+            padding-left: 10px;
+        }
+    }
+    &__contact {
+        @include flex-justify-align-center();
+    }
+    & a {
+        @include text_decoration(white);
+    }
+}
