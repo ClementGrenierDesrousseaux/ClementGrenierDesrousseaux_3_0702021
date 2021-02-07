@@ -9,13 +9,37 @@ $background-color: #f6f6f6;
 
 @mixin flex-justify-align-center {
     display: flex;
-    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-around-align-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-between-align-center {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 @mixin text_decoration($text_color) {
     text-decoration: none;
     color: $text_color;
+}
+
+@mixin border-image {
+    border-radius: 20px 20px 0px 0px;
+}
+
+@mixin border-figcaption {
+    border-radius: 0px 0px 20px 20px;
+}
+
+@mixin box_shadow {
+    box-shadow: 0px 0px 10px 10px $background-color;
 }
 
 body {
@@ -31,6 +55,18 @@ body {
     align-items: center;
     @include background_color();
     width: 100%;
+    &__logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & i {
+            display: none;
+        }
+        & p {
+            display: none
+        }
+    }
     &__localisation {
         @include flex-justify-align-center();
         background: linear-gradient(to top, darken($background-color, 5%), 95%, darken($background-color, 30%));
@@ -47,6 +83,7 @@ body {
         height: 60px;
         border-radius: 30px;
         box-shadow: 0px 0px 10px 10px;
+        margin-bottom: 20px;
     }
 }
 
@@ -57,20 +94,23 @@ header nav {
     background-color: white;
     & .bouton {
         @include flex-justify-align-center();
+        margin-top: 20px;
+        margin-bottom: 20px;
         &__numero {
-            background-color: yellow;
-            width: 20px;
-            height: 20px;
+            background-color: $primary-color;
+            width: 30px;
+            height: 30px;
             border-radius: 20px;
             @include flex-justify-align-center();
             z-index: 2;
         }
         & i {
             @include flex-justify-align-center();
+            @include box_shadow();
             padding-left: 20px;
             margin-left: -10px;
-            background-color: pink;
-            height: 40px;
+            height: 70px;
+            width: 250px;
             z-index: 1;
             border-radius: 20px;
             & p {
@@ -83,17 +123,61 @@ header nav {
 
 .section {
     @include background_color();
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 0px;
+    &__titre {
+        font-weight: bold;
+    }
+    &__restaurant {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 50px;
+    }
+    & a {
+        @include text_decoration(black);
+        display: flex;
+        flex-direction: column;
+    }
+    & figure {
+        margin: 0px;
+        width: 100%;
+        & img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            @include border-image();
+        }
+        & figcaption {
+            width: 100%;
+            height: 100px;
+            @include flex-around-align-center();
+            @include border-figcaption();
+            background-color: white;
+        }
+        & i {
+            font-size: 1.5em;
+        }
+        & .description {
+            &__nom {
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 .footer {
     background-color: #353535;
     width: 100%;
+    height: 150px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     &__logo {
         font-family: "Shrikhand";
         color: white;
+        font-size: 1.5em;
     }
     &__restaurant i {
         @include flex-justify-align-center();
@@ -114,3 +198,5 @@ header nav {
         @include text_decoration(white);
     }
 }
+
+@import "restaurant"; 

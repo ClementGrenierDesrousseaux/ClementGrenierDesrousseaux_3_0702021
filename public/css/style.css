@@ -12,9 +12,21 @@ body {
   background-color: #f6f6f6;
   width: 100%;
 }
+.header__logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logo i {
+  display: none;
+}
+.header__logo p {
+  display: none;
+}
 .header__localisation {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   background: linear-gradient(to top, #e9e9e9, 95%, #aaaaaa);
   width: 100%;
@@ -24,7 +36,7 @@ body {
 }
 .header__bouton_exploration {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   color: white;
   background: linear-gradient(to top left, #9356dc, 60%, #ff79da);
@@ -32,6 +44,7 @@ body {
   height: 60px;
   border-radius: 30px;
   box-shadow: 0px 0px 10px 10px;
+  margin-bottom: 20px;
 }
 
 header nav {
@@ -42,27 +55,30 @@ header nav {
 }
 header nav .bouton {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 header nav .bouton__numero {
-  background-color: yellow;
-  width: 20px;
-  height: 20px;
+  background-color: #9356dc;
+  width: 30px;
+  height: 30px;
   border-radius: 20px;
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   z-index: 2;
 }
 header nav .bouton i {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
+  box-shadow: 0px 0px 10px 10px #f6f6f6;
   padding-left: 20px;
   margin-left: -10px;
-  background-color: pink;
-  height: 40px;
+  height: 70px;
+  width: 250px;
   z-index: 1;
   border-radius: 20px;
 }
@@ -73,11 +89,55 @@ header nav .bouton i p {
 
 .section {
   background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 0px;
+}
+.section__titre {
+  font-weight: bold;
+}
+.section__restaurant {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.section a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.section figure {
+  margin: 0px;
+  width: 100%;
+}
+.section figure img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+.section figure figcaption {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0px 0px 20px 20px;
+  background-color: white;
+}
+.section figure i {
+  font-size: 1.5em;
+}
+.section figure .description__nom {
+  font-weight: bold;
 }
 
 .footer {
   background-color: #353535;
   width: 100%;
+  height: 150px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -85,10 +145,11 @@ header nav .bouton i p {
 .footer__logo {
   font-family: "Shrikhand";
   color: white;
+  font-size: 1.5em;
 }
 .footer__restaurant i {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 }
 .footer__restaurant i p {
@@ -96,7 +157,7 @@ header nav .bouton i p {
 }
 .footer__partenaire i {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 }
 .footer__partenaire i p {
@@ -104,12 +165,77 @@ header nav .bouton i p {
 }
 .footer__contact {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 }
 .footer a {
   text-decoration: none;
   color: white;
+}
+
+body {
+  width: 100%;
+}
+
+.header-restaurant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo-accueil:nth-of-type(1) {
+  display: none;
+  flex-basis: 10%;
+}
+
+.logo-accueil:nth-of-type(2) {
+  flex-basis: 10%;
+}
+
+.logo-accueil:nth-of-type(3) {
+  flex-basis: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-accueil:nth-of-type(4) {
+  flex-basis: 10%;
+}
+
+.aside-restaurant {
+  width: 100%;
+  height: 200px;
+}
+.aside-restaurant img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.article-restaurant {
+  background-color: #f6f6f6;
+}
+
+.plat {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 0px 10px 10px #dddddd;
+  border-radius: 20px;
+  padding: 10px;
+}
+.plat__entier__nom {
+  font-weight: bold;
+}
+.plat__prix {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */
