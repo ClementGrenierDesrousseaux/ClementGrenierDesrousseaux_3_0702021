@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "roboto";
   margin: 0px;
@@ -204,38 +205,162 @@ body {
   flex-basis: 10%;
 }
 
+.section-restaurant {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .aside-restaurant {
   width: 100%;
-  height: 200px;
+  height: 400px;
+  margin: 0px;
 }
-.aside-restaurant img {
+.aside-restaurant figure {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+.aside-restaurant figure img {
   object-fit: cover;
   width: 100%;
-  height: 200px;
+  height: 300px;
+}
+.aside-restaurant figure figcaption {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #f6f6f6;
+  font-family: "Shrikhand";
+  font-size: 2em;
+  border-radius: 40px 40px 0px 0px;
+  margin-top: -40px;
+}
+.aside-restaurant figure figcaption i {
+  -webkit-background-clip: text;
+  transition: 200ms ease-in;
+}
+.aside-restaurant figure figcaption i:hover {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
 }
 
 .article-restaurant {
-  background-color: #f6f6f6;
+  width: 70%;
+}
+
+.menu_entrée {
+  background-color: pink;
+  width: 100%;
+}
+
+.nom_restaurant {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Shrikhand";
+  font-size: 2em;
+  background-color: green;
+  height: 500px;
+  width: 100%;
+  z-index: 2;
 }
 
 .plat {
-  width: 70%;
-  margin: auto;
   display: flex;
+  width: 100%;
+  height: 100px;
   justify-content: space-between;
-  background-color: white;
-  box-shadow: 0px 0px 10px 10px #dddddd;
-  border-radius: 20px;
-  padding: 10px;
+  align-items: center;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  /*&-nom p {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }*/
 }
-.plat__entier__nom {
-  font-weight: bold;
-}
-.plat__prix {
-  font-weight: bold;
+.plat-seul {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0px 0px 20px 20px #e9e9e9;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+.plat-prix {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+.plat-anim {
+  width: 0px;
+  height: 100%;
+  background-color: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  border-radius: 0px 30px 30px 0px;
+}
+.plat-anim i {
+  color: white;
+}
+
+.plat:hover .plat-anim {
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-fill-mode: forwards;
+  display: flex;
+}
+.plat:hover .plat-anim p {
+  animation-duration: 1s;
+  animation-name: turn;
+  animation-fill-mode: forwards;
+  font-size: 2em;
+}
+.plat:hover .plat-seul {
+  animation-duration: 100ms;
+  animation-name: border;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 200px;
+  }
+}
+@keyframes turn {
+  from {
+    opacity: 0;
+    transform: rotate(0);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-1turn);
+  }
+}
+@keyframes border {
+  from {
+    border-radius: 30px;
+  }
+  to {
+    border-radius: 30px 0px 0px 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
