@@ -186,5 +186,128 @@ body {
     }
 }
 
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.menu__entrée {
+    animation: fadein 1s;
+}
+
+.menu__plat {
+    animation: fadein 2s;
+}
+
+.menu__dessert {
+    animation: fadein 3s;
+}
+
+$cd-bars: #15DEA5;
+$size: 3vh;
+$num-bars: 5;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-bars;
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$terciary-color: #99e2d0;
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.load {
+    width: 100%;
+    height: 700px;
+    background-color: pink;
+    margin: auto;
+    display: flex;
+    font-size: 5em;
+    justify-content: center;
+    align-items: center;
+    animation: end-anim 3.5s forwards;
+    &__bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        color: transparent;
+        background-clip: text;
+        animation: bars $anim-dur forwards infinite;
+        animation-direction: alternate;
+        @for $i from 1 through $num-bars {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
+        &--1 {
+            background-image: linear-gradient(to top, $primary-color 25%, $secondary-color 75%);
+        }
+        &--2 {
+            background-image: linear-gradient(to top, $primary-color 25%, $secondary-color 75%);
+        }
+        &--3 {
+            background-image: linear-gradient(to top, $primary-color 25%, $secondary-color 75%);
+        }
+        &--4 {
+            background-image: linear-gradient(to top, $primary-color 25%, $secondary-color 75%);
+        }
+        &--5 {
+            background-image: linear-gradient(to top, $primary-color 25%, $secondary-color 75%);
+        }
+    }
+}
+
+@keyframes bars {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes end-anim {
+    0% {
+        width: 100%;
+        height: 700px;
+    }
+    99% {
+        width: 100%;
+        height: 700px;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+@keyframes end-anim-blocpage {
+    0% {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+    99% {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        visibility: visible;
+    }
+}
+
+.bloc_page {
+    animation: end-anim-blocpage 3.6s forwards;
+}
+
 
 /*# sourceMappingURL=style.css.map */
