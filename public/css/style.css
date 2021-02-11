@@ -307,6 +307,9 @@ body {
   box-shadow: 0px 0px 20px 20px #e9e9e9;
   padding-left: 20px;
   padding-right: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .plat-prix {
   display: flex;
@@ -328,21 +331,32 @@ body {
 .plat-anim i {
   color: white;
 }
+.plat-nom {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  font-weight: bold;
+}
 .plat-nom-entier {
   height: 100%;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .plat-nom p {
   width: 100%;
   font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .plat__catégorie {
   text-transform: uppercase;
 }
 .plat-accomp {
   font-size: 0.8em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .plat:hover .plat-anim {
