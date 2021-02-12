@@ -148,10 +148,14 @@ header nav {
     @include background_color();
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     height: 100%;
+    width: 100%;
     margin: 0px;
     &__titre {
         font-weight: bold;
+        padding-left: 30px;
+        font-size: 1.3em;
     }
     &__restaurant {
         display: flex;
@@ -162,18 +166,34 @@ header nav {
         @include text_decoration(black);
         display: flex;
         flex-direction: column;
+        margin: 0px;
     }
     & figure {
+        width: 300px;
         margin: 0px;
-        width: 100%;
         & img {
             width: 300px;
             height: 200px;
             object-fit: cover;
             @include border-image();
         }
+        & .container-nouveau {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+        & .nouveau {
+            color: darken($terciary-color, 40%);
+            font-weight: bold;
+            position: absolute;
+            z-index: 2;
+            background-color: $terciary-color;
+            width: 90px;
+            height: 30px;
+            @include flex-justify-align-center();
+        }
         & figcaption {
-            width: 100%;
+            width: 300px;
             height: 100px;
             @include flex-around-align-center();
             @include border-figcaption();
