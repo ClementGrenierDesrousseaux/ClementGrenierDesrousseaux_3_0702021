@@ -1,8 +1,15 @@
 @charset "UTF-8";
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
 body {
   font-family: "roboto";
   margin: 0px;
-  width: 95%;
+  height: 100%;
+  width: 100%;
   margin: auto;
 }
 
@@ -12,9 +19,11 @@ body {
   align-items: center;
   background-color: #f6f6f6;
   width: 100%;
+  height: 100%;
 }
 .header__logo {
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,6 +40,7 @@ body {
   align-items: center;
   background: linear-gradient(to top, #e9e9e9, 95%, #aaaaaa);
   width: 100%;
+  height: 100%;
 }
 .header__localisation p {
   margin-left: 10px;
@@ -42,7 +52,7 @@ body {
   color: white;
   background: linear-gradient(to top left, #9356dc, 60%, #ff79da);
   width: 250px;
-  height: 60px;
+  height: 65px;
   border-radius: 30px;
   box-shadow: 0px 0px 10px 10px #f1f1f1;
   margin-bottom: 20px;
@@ -58,6 +68,7 @@ header nav {
   display: flex;
   justify-content: space-around;
   background-color: white;
+  height: 100%;
 }
 header nav .bouton {
   display: flex;
@@ -105,7 +116,7 @@ header nav .bouton i:hover {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 100%;
   margin: 0px;
 }
 .section__titre {
@@ -188,8 +199,116 @@ header nav .bouton i:hover {
   color: white;
 }
 
+.fa-heart {
+  -webkit-background-clip: text;
+  transition: 200ms ease-in;
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
+.fa-heart:hover {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
+  -webkit-text-stroke: 0px Black;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  position: fixed;
+}
+
+.load {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 5em;
+  justify-content: center;
+  align-items: center;
+  animation: end-anim 3s forwards;
+}
+.load__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: transparent;
+  background-clip: text;
+  animation: bars 1000ms forwards infinite;
+  animation-direction: alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+.load__bar--1 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.load__bar--2 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.load__bar--3 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.load__bar--4 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.load__bar--5 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+
+.bloc_page {
+  animation: opacity-blocpage 3.1s forwards;
+}
+
+@keyframes bars {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes end-anim {
+  0% {
+    width: 100%;
+    height: 700px;
+  }
+  99% {
+    width: 100%;
+    height: 700px;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+  }
+}
+@keyframes opacity-blocpage {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   width: 100%;
+  height: 100%;
 }
 
 .header-restaurant {
@@ -206,6 +325,11 @@ body {
 
 .logo-accueil:nth-of-type(2) {
   flex-basis: 10%;
+}
+.logo-accueil:nth-of-type(2) a {
+  text-decoration: none;
+  color: black;
+  padding-left: 15px;
 }
 
 .logo-accueil:nth-of-type(3) {
@@ -255,14 +379,6 @@ body {
   font-size: 2em;
   border-radius: 40px 40px 0px 0px;
   margin-top: -40px;
-}
-.aside-restaurant figure figcaption i {
-  -webkit-background-clip: text;
-  transition: 200ms ease-in;
-}
-.aside-restaurant figure figcaption i:hover {
-  color: transparent;
-  background-image: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
 }
 
 .article-restaurant {
@@ -344,6 +460,9 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .plat-nom p {
   width: 100%;
@@ -423,107 +542,6 @@ body {
   animation: fadein 3s;
 }
 
-body {
-  width: 100%;
-  height: 100%;
-}
-
-.load {
-  width: 100%;
-  height: 700px;
-  background-color: pink;
-  margin: auto;
-  display: flex;
-  font-size: 5em;
-  justify-content: center;
-  align-items: center;
-  animation: end-anim 3.5s forwards;
-}
-.load__bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  color: transparent;
-  background-clip: text;
-  animation: bars 1000ms forwards infinite;
-  animation-direction: alternate;
-}
-.load__bar--1 {
-  animation-delay: 200ms;
-}
-.load__bar--2 {
-  animation-delay: 400ms;
-}
-.load__bar--3 {
-  animation-delay: 600ms;
-}
-.load__bar--4 {
-  animation-delay: 800ms;
-}
-.load__bar--5 {
-  animation-delay: 1000ms;
-}
-.load__bar--1 {
-  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
-}
-.load__bar--2 {
-  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
-}
-.load__bar--3 {
-  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
-}
-.load__bar--4 {
-  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
-}
-.load__bar--5 {
-  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
-}
-
-@keyframes bars {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes end-anim {
-  0% {
-    width: 100%;
-    height: 700px;
-  }
-  99% {
-    width: 100%;
-    height: 700px;
-  }
-  100% {
-    width: 0px;
-    height: 0px;
-  }
-}
-@keyframes end-anim-blocpage {
-  0% {
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
-  }
-  99% {
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    visibility: visible;
-  }
-}
-.bloc_page {
-  animation: end-anim-blocpage 3.6s forwards;
-}
-
 /*# sourceMappingURL=style.css.map */
 @media screen and (max-width: 767px) {
   footer {
@@ -541,6 +559,7 @@ body {
 
   .logo-accueil:nth-of-type(1) {
     display: flex;
+    padding-left: 15px;
   }
 
   .logo-accueil:nth-of-type(2) {
@@ -603,6 +622,7 @@ body {
 
   .logo-accueil:nth-of-type(1) {
     display: flex;
+    padding-left: 15px;
   }
 
   .logo-accueil:nth-of-type(2) {
