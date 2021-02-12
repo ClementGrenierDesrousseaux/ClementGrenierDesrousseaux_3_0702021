@@ -247,7 +247,7 @@ header nav .bouton i:hover {
   font-size: 5em;
   justify-content: center;
   align-items: center;
-  animation: end-anim 0s forwards;
+  animation: end-anim 3s forwards;
 }
 .load__bar {
   display: flex;
@@ -292,7 +292,7 @@ header nav .bouton i:hover {
 }
 
 .bloc_page {
-  animation: opacity-blocpage 0s forwards;
+  animation: opacity-blocpage 3.1s forwards;
 }
 
 @keyframes bars {
