@@ -546,10 +546,13 @@ body {
   }
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  50% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -627,6 +630,10 @@ body {
 
   .article-restaurant {
     width: 90%;
+  }
+
+  .load i {
+    font-size: 0.4em;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
