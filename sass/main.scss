@@ -176,6 +176,7 @@ header nav {
             height: 200px;
             object-fit: cover;
             @include border-image();
+            z-index: 1;
         }
         & .container-nouveau {
             display: flex;
