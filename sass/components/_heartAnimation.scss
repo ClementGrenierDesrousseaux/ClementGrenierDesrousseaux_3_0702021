@@ -1,0 +1,11 @@
+.fa-heart {
+    -webkit-background-clip: text;
+    transition: 200ms ease-in;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    &:hover {
+        color: transparent;
+        background-image: linear-gradient(to top, $primary-color 0%, $secondary-color 100%);
+        -webkit-text-stroke: 0px Black;
+    }
+}

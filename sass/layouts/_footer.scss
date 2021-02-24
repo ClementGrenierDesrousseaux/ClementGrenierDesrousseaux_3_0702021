@@ -1,0 +1,31 @@
+.footer {
+    background-color: #353535;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__logo {
+        color: white;
+        font-size: 1.5em;
+    }
+    &__restaurant i {
+        @include flex-justify-align-center();
+        & p {
+            padding-left: 10px;
+        }
+    }
+    &__partenaire i {
+        @include flex-justify-align-center();
+        & p {
+            padding-left: 10px;
+        }
+    }
+    &__contact {
+        @include flex-justify-align-center();
+    }
+    & a {
+        @include text_decoration(white);
+    }
+}
