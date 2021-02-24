@@ -1,0 +1,155 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include background_color();
+    width: 100%;
+    height: 100%;
+    &__logo {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & i {
+            display: none;
+        }
+        & p {
+            display: none
+        }
+    }
+    &__localisation {
+        @include flex-justify-align-center();
+        background: linear-gradient(to top, darken($background-color, 5%), 95%, darken($background-color, 30%));
+        width: 100%;
+        height: 100%;
+        & p {
+            margin-left: 10px;
+        }
+    }
+    &__bouton_exploration {
+        @include flex-justify-align-center();
+        color: white;
+        background: linear-gradient(to top left, #9356dc, 60%, #ff79da);
+        width: 250px;
+        height: 65px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px 10px darken($background-color, 2%);
+        margin-bottom: 20px;
+        text-decoration: none;
+        &:hover {
+            background: linear-gradient(to top left, lighten(#9356dc, 5%), 60%, lighten(#ff79da, 5%));
+            box-shadow: 0px 0px 10px 10px darken($background-color, 6%);
+        }
+    }
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    height: 100%;
+    & .bouton {
+        @include flex-justify-align-center();
+        margin-top: 20px;
+        margin-bottom: 20px;
+        &__numero {
+            background-color: $primary-color;
+            width: 30px;
+            height: 30px;
+            border-radius: 20px;
+            @include flex-justify-align-center();
+            z-index: 2;
+            color: white
+        }
+        & i {
+            @include flex-justify-align-center();
+            @include box_shadow();
+            padding-left: 20px;
+            margin-left: -10px;
+            height: 70px;
+            width: 250px;
+            z-index: 1;
+            border-radius: 20px;
+            color: grey;
+            & p {
+                padding-left: 20px;
+                padding-right: 20px;
+                color: black
+            }
+            &:hover {
+                background-color: lighten($primary-color, 25%);
+                color: $primary-color;
+                box-shadow: 0px 0px 10px 10px darken($background-color, 5%)
+            }
+        }
+    }
+}
+
+.section {
+    @include background_color();
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    &__titre {
+        font-weight: bold;
+        padding-left: 30px;
+        font-size: 1.3em;
+    }
+    &__restaurant {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 50px;
+    }
+    & a {
+        @include text_decoration(black);
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+    & figure {
+        width: 300px;
+        margin: 0px;
+        & img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            @include border-image();
+            z-index: 1;
+        }
+        & .container-nouveau {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+        & .nouveau {
+            color: darken($terciary-color, 40%);
+            font-weight: bold;
+            position: absolute;
+            z-index: 2;
+            background-color: $terciary-color;
+            width: 90px;
+            height: 30px;
+            @include flex-justify-align-center();
+        }
+        & figcaption {
+            width: 300px;
+            height: 100px;
+            @include flex-around-align-center();
+            @include border-figcaption();
+            background-color: white;
+        }
+        & i {
+            font-size: 1.5em;
+        }
+        & .description {
+            &__nom {
+                font-weight: bold;
+            }
+        }
+    }
+}

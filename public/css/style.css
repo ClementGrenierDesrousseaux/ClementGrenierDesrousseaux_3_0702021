@@ -1,4 +1,83 @@
 @charset "UTF-8";
+@keyframes bars {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes end-anim {
+  0% {
+    width: 100%;
+    height: 700px;
+  }
+  99% {
+    width: 100%;
+    height: 700px;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+  }
+}
+@keyframes opacity-blocpage {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slidein {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 200px;
+  }
+}
+@keyframes turn {
+  from {
+    opacity: 0;
+    transform: rotate(0);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-1turn);
+  }
+}
+@keyframes border {
+  from {
+    border-radius: 30px;
+  }
+  to {
+    border-radius: 30px 0px 0px 30px;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* */
+body {
+  font-family: "roboto";
+}
+
+.footer__logo {
+  font-family: "Shrikhand";
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -6,13 +85,13 @@ html {
 }
 
 body {
-  font-family: "roboto";
   margin: 0px;
   height: 100%;
   width: 100%;
   margin: auto;
 }
 
+/* */
 .header {
   display: flex;
   flex-direction: column;
@@ -182,158 +261,6 @@ header nav .bouton i:hover {
   font-weight: bold;
 }
 
-.footer {
-  background-color: #353535;
-  width: 100%;
-  height: auto;
-  padding-bottom: 30px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.footer__logo {
-  font-family: "Shrikhand";
-  color: white;
-  font-size: 1.5em;
-}
-.footer__restaurant i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.footer__restaurant i p {
-  padding-left: 10px;
-}
-.footer__partenaire i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.footer__partenaire i p {
-  padding-left: 10px;
-}
-.footer__contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.footer a {
-  text-decoration: none;
-  color: white;
-}
-
-.fa-heart {
-  -webkit-background-clip: text;
-  transition: 200ms ease-in;
-  color: white;
-  -webkit-text-stroke: 2px black;
-}
-.fa-heart:hover {
-  color: transparent;
-  background-image: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
-  -webkit-text-stroke: 0px Black;
-}
-
-.container {
-  height: 100%;
-  width: 100%;
-  margin: 0px;
-  position: fixed;
-}
-
-.load {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  font-size: 5em;
-  justify-content: center;
-  align-items: center;
-  animation: end-anim 3s forwards;
-}
-.load__bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  color: transparent;
-  background-clip: text;
-  animation: bars 1000ms forwards infinite;
-  animation-direction: alternate;
-}
-.load__bar--1 {
-  animation-delay: 200ms;
-}
-.load__bar--2 {
-  animation-delay: 400ms;
-}
-.load__bar--3 {
-  animation-delay: 600ms;
-}
-.load__bar--4 {
-  animation-delay: 800ms;
-}
-.load__bar--5 {
-  animation-delay: 1000ms;
-}
-.load__bar--1 {
-  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
-}
-.load__bar--2 {
-  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
-}
-.load__bar--3 {
-  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
-}
-.load__bar--4 {
-  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
-}
-.load__bar--5 {
-  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
-}
-
-.bloc_page {
-  animation: opacity-blocpage 3.1s forwards;
-}
-
-@keyframes bars {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes end-anim {
-  0% {
-    width: 100%;
-    height: 700px;
-  }
-  99% {
-    width: 100%;
-    height: 700px;
-  }
-  100% {
-    width: 0px;
-    height: 0px;
-  }
-}
-@keyframes opacity-blocpage {
-  0% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-body {
-  width: 100%;
-  height: 100%;
-}
-
 .header-restaurant {
   display: flex;
   align-items: center;
@@ -501,74 +428,8 @@ body {
   overflow: hidden;
 }
 
-.plat:hover .plat-anim {
-  animation-duration: 1s;
-  animation-name: slidein;
-  animation-fill-mode: forwards;
-  display: flex;
-}
-.plat:hover .plat-anim p {
-  animation-duration: 1s;
-  animation-name: turn;
-  animation-fill-mode: forwards;
-  font-size: 2em;
-}
-.plat:hover .plat-seul {
-  animation-duration: 100ms;
-  animation-name: border;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slidein {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 200px;
-  }
-}
-@keyframes turn {
-  from {
-    opacity: 0;
-    transform: rotate(0);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(-1turn);
-  }
-}
-@keyframes border {
-  from {
-    border-radius: 30px;
-  }
-  to {
-    border-radius: 30px 0px 0px 30px;
-  }
-}
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.menu__entrée {
-  animation: fadein 1s;
-}
-
-.menu__plat {
-  animation: fadein 2s;
-}
-
-.menu__dessert {
-  animation: fadein 3s;
-}
-
 /*# sourceMappingURL=style.css.map */
+/* */
 @media screen and (max-width: 767px) {
   footer {
     display: flex;
@@ -675,5 +536,150 @@ body {
     margin-bottom: 30px;
   }
 }
+.footer {
+  background-color: #353535;
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__logo {
+  color: white;
+  font-size: 1.5em;
+}
+.footer__restaurant i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__restaurant i p {
+  padding-left: 10px;
+}
+.footer__partenaire i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__partenaire i p {
+  padding-left: 10px;
+}
+.footer__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* */
+.fa-heart {
+  -webkit-background-clip: text;
+  transition: 200ms ease-in;
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
+.fa-heart:hover {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
+  -webkit-text-stroke: 0px Black;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  position: fixed;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 5em;
+  justify-content: center;
+  align-items: center;
+  animation: end-anim 3s forwards;
+}
+.loader__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: transparent;
+  background-clip: text;
+  animation: bars 1000ms forwards infinite;
+  animation-direction: alternate;
+}
+.loader__bar--1 {
+  animation-delay: 200ms;
+}
+.loader__bar--2 {
+  animation-delay: 400ms;
+}
+.loader__bar--3 {
+  animation-delay: 600ms;
+}
+.loader__bar--4 {
+  animation-delay: 800ms;
+}
+.loader__bar--5 {
+  animation-delay: 1000ms;
+}
+.loader__bar--1 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.loader__bar--2 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.loader__bar--3 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.loader__bar--4 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.loader__bar--5 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+
+.bloc_page {
+  animation: opacity-blocpage 3.1s forwards;
+}
+
+.plat:hover .plat-anim {
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-fill-mode: forwards;
+  display: flex;
+}
+.plat:hover .plat-anim p {
+  animation-duration: 1s;
+  animation-name: turn;
+  animation-fill-mode: forwards;
+  font-size: 2em;
+}
+.plat:hover .plat-seul {
+  animation-duration: 100ms;
+  animation-name: border;
+  animation-fill-mode: forwards;
+}
+
+.menu__entrée {
+  animation: fadein 1s;
+}
+
+.menu__plat {
+  animation: fadein 2s;
+}
+
+.menu__dessert {
+  animation: fadein 3s;
+}
+
+/* */
 
 /*# sourceMappingURL=style.css.map */

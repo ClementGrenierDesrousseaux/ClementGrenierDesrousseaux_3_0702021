@@ -1,0 +1,19 @@
+.plat:hover .plat {
+    &-anim {
+        animation-duration: 1s;
+        animation-name: slidein;
+        animation-fill-mode: forwards;
+        display: flex;
+        & p {
+            animation-duration: 1s;
+            animation-name: turn;
+            animation-fill-mode: forwards;
+            font-size: 2em;
+        }
+    }
+    &-seul {
+        animation-duration: 100ms;
+        animation-name: border;
+        animation-fill-mode: forwards;
+    }
+}
