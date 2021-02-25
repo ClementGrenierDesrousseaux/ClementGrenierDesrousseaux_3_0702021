@@ -4,6 +4,8 @@
 
 .footer {
     &__logo {
-        font-family: "Shrikhand";
+        & p {
+            font-family: "Shrikhand";
+        }
     }
 }

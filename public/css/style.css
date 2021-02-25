@@ -74,7 +74,7 @@
   font-family: "roboto";
 }
 
-.footer__logo {
+.footer__logo p {
   font-family: "Shrikhand";
 }
 
@@ -338,10 +338,12 @@ header nav .bouton__interieur:hover i {
   width: 100%;
   height: 100px;
   background-color: #f6f6f6;
-  font-family: "Shrikhand", cursive;
   font-size: 2em;
   border-radius: 40px 40px 0px 0px;
   margin-top: -40px;
+}
+.aside-restaurant figure figcaption p {
+  font-family: "Shrikhand", cursive;
 }
 
 .article-restaurant {
