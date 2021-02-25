@@ -68,13 +68,8 @@
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-    footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        height: auto;
-        width: 100%;
+    .footer__logo {
+        padding-top: 10px;
     }
     .logo-accueil i {
         color: black;
