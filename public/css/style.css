@@ -458,6 +458,7 @@ header nav .bouton__interieur:hover i {
 .footer__logo {
   color: white;
   font-size: 1.3em;
+  padding-top: 10px;
 }
 .footer__restaurant {
   font-weight: bold;
@@ -575,10 +576,6 @@ header nav .bouton__interieur:hover i {
   .logo-accueil:nth-of-type(1) {
     display: flex;
     padding-left: 15px;
-  }
-
-  .logo-accueil:nth-of-type(2) {
-    display: none;
   }
 
   nav {
