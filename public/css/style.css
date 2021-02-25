@@ -70,7 +70,7 @@
   }
 }
 /* */
-body {
+* {
   font-family: "roboto";
 }
 
@@ -126,6 +126,9 @@ body {
 .header__localisation p {
   margin-left: 10px;
 }
+.header__sous_titre {
+  font-weight: 300;
+}
 .header__bouton_exploration {
   display: flex;
   justify-content: center;
@@ -138,6 +141,7 @@ body {
   box-shadow: 0px 0px 10px 10px #f1f1f1;
   margin-bottom: 20px;
   text-decoration: none;
+  font-weight: 500;
 }
 .header__bouton_exploration:hover {
   background: linear-gradient(to top left, #a16be0, 60%, #ff93e1);
@@ -169,28 +173,36 @@ header nav .bouton__numero {
   z-index: 2;
   color: white;
 }
-header nav .bouton i {
+header nav .bouton__interieur {
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 10px 10px #f6f6f6;
-  padding-left: 20px;
-  margin-left: -10px;
-  height: 70px;
-  width: 250px;
-  z-index: 1;
   border-radius: 20px;
+  z-index: 1;
+  margin-left: -15px;
+}
+header nav .bouton__interieur i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  height: 70px;
   color: grey;
 }
-header nav .bouton i p {
+header nav .bouton__interieur p {
   padding-left: 20px;
   padding-right: 20px;
   color: black;
+  font-weight: 500;
 }
-header nav .bouton i:hover {
-  background-color: #d7c0f2;
+header nav .bouton__interieur:hover {
+  background-color: #e4d5f6;
   color: #9356dc;
   box-shadow: 0px 0px 10px 10px #e9e9e9;
+}
+header nav .bouton__interieur:hover i {
+  color: #9356dc;
 }
 
 .section {
@@ -326,7 +338,7 @@ header nav .bouton i:hover {
   width: 100%;
   height: 100px;
   background-color: #f6f6f6;
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", cursive;
   font-size: 2em;
   border-radius: 40px 40px 0px 0px;
   margin-top: -40px;
@@ -357,19 +369,19 @@ header nav .bouton i:hover {
 .plat {
   display: flex;
   width: 100%;
-  height: 80px;
-  justify-content: space-between;
+  height: 70px;
+  justify-content: space-around;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 20px;
   margin-bottom: 30px;
 }
 .plat-seul {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: white;
   box-shadow: 0px 0px 20px 20px #e9e9e9;
   padding-left: 20px;
@@ -393,7 +405,7 @@ header nav .bouton i:hover {
   justify-content: center;
   align-items: center;
   display: none;
-  border-radius: 0px 30px 30px 0px;
+  border-radius: 0px 20px 20px 0px;
 }
 .plat-anim i {
   color: white;
@@ -423,7 +435,8 @@ header nav .bouton i:hover {
   text-transform: uppercase;
 }
 .plat-accomp {
-  font-size: 0.8em;
+  font-size: 0.9em;
+  font-weight: 300;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -599,7 +612,7 @@ header nav .bouton i:hover {
   font-size: 5em;
   justify-content: center;
   align-items: center;
-  animation: end-anim 0s forwards;
+  animation: end-anim 3s forwards;
 }
 .loader__bar {
   display: flex;
@@ -608,7 +621,7 @@ header nav .bouton i:hover {
   height: 100%;
   width: 100%;
   color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text;
   animation: bars 1000ms forwards infinite;
   animation-direction: alternate;
 }
@@ -644,7 +657,7 @@ header nav .bouton i:hover {
 }
 
 .bloc_page {
-  animation: opacity-blocpage 0s forwards;
+  animation: opacity-blocpage 3.1s forwards;
 }
 
 .plat:hover .plat-anim {

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/prefixed/style.css">
     <title>Oh My Food</title>
 </head>
 
@@ -39,7 +39,7 @@
                 <h1>Réservez le menu qui vous convient</h1>
             </div>
             <div class="header__sous_titre">
-                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
             </div>
             <div>
                 <a href="#ancre_restaurant" class="header__bouton_exploration">
@@ -49,23 +49,24 @@
             <nav>
                 <div class="bouton">
                     <p class="bouton__numero">1</p>
-                    <i class="fas fa-mobile-alt">
-                    <p>Choisissez un restaurant</p>
-                </i>
+                    <div class="bouton__interieur">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>Choisissez un restaurant</p>
+                    </div>
                 </div>
                 <div class="bouton">
                     <p class="bouton__numero">2</p>
-                    <i class="fas fa-list-ul">
-                    <p>Composez votre menu</p>
-                </i>
-
+                    <div class="bouton__interieur">
+                        <i class="fas fa-list-ul"></i>
+                        <p>Composez votre menu</p>
+                    </div>
                 </div>
                 <div class="bouton">
                     <p class="bouton__numero">3</p>
-                    <i class="fas fa-store">
-                    <p>Dégustez au restaurant</p>
-                </i>
-
+                    <div class="bouton__interieur">
+                        <i class="fas fa-store"></i>
+                        <p>Dégustez au restaurant</p>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -75,8 +76,8 @@
             </div>
             <div class="section__restaurant">
                 <div class="section__figure">
-                    <figure>
-                        <a href="restaurants/palette.html">
+                    <a href="restaurants/palette.html">
+                        <figure>
                             <div class="container-nouveau">
                                 <p class="nouveau">Nouveau</p>
                             </div>
@@ -90,12 +91,12 @@
                                     <i class="fas fa-heart"></i>
                                 </div>
                             </figcaption>
-                        </a>
-                    </figure>
+                        </figure>
+                    </a>
                 </div>
                 <div class="section__figure">
-                    <figure>
-                        <a href="restaurants/note.html">
+                    <a href="restaurants/note.html">
+                        <figure>
                             <div class="container-nouveau">
                                 <p class="nouveau">Nouveau</p>
                             </div>
@@ -109,12 +110,13 @@
                                     <i class="fas fa-heart"></i>
                                 </div>
                             </figcaption>
-                        </a>
-                    </figure>
+
+                        </figure>
+                    </a>
                 </div>
                 <div class="section__figure">
-                    <figure>
-                        <a href="restaurants/francaise.html">
+                    <a href="restaurants/francaise.html">
+                        <figure>
                             <img src="images/restaurants/francaise.jpg" alt="Restaurant La palette du goût">
                             <figcaption class="figure__caption">
                                 <div class="description">
@@ -125,12 +127,12 @@
                                     <i class="fas fa-heart"></i>
                                 </div>
                             </figcaption>
-                        </a>
-                    </figure>
+                        </figure>
+                    </a>
                 </div>
                 <div class="section__figure">
-                    <figure>
-                        <a href="restaurants/delice.html">
+                    <a href="restaurants/delice.html">
+                        <figure>
                             <img src="images/restaurants/delice.jpg" alt="Restaurant La palette du goût">
                             <figcaption class="figure__caption">
                                 <div class="description">
@@ -141,8 +143,8 @@
                                     <i class="fas fa-heart"></i>
                                 </div>
                             </figcaption>
-                        </a>
-                    </figure>
+                        </figure>
+                    </a>
                 </div>
             </div>
         </section>
