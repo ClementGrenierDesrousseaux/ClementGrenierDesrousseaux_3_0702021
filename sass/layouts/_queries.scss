@@ -1,11 +1,10 @@
 @media screen and (max-width: 767px) {
-    footer {
+    .footer {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-around;
         align-items: flex-start;
-        height: auto;
-        width: 100%;
+        padding-left: 30px;
     }
     .logo-accueil i {
         color: black;
@@ -13,9 +12,6 @@
     .logo-accueil:nth-of-type(1) {
         display: flex;
         padding-left: 15px;
-    }
-    .logo-accueil:nth-of-type(2) {
-        display: none;
     }
     .header {
         margin: 0px;

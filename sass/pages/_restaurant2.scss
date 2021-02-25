@@ -3,30 +3,28 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.logo-accueil:nth-of-type(1) {
-    display: none;
-    flex-basis: 10%;
-}
-
-.logo-accueil:nth-of-type(2) {
-    flex-basis: 10%;
-    & a {
-        text-decoration: none;
+.logo-accueil {
+    & i {
         color: black;
+    }
+    &:nth-of-type(1) {
+        flex-basis: 10%;
         padding-left: 15px;
     }
 }
 
-.logo-accueil:nth-of-type(3) {
-    flex-basis: 80%;
+.logo-accueil:nth-of-type(2) {
+    flex-basis: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logo-accueil:nth-of-type(4) {
+.logo-accueil:nth-of-type(3) {
     flex-basis: 10%;
 }
 

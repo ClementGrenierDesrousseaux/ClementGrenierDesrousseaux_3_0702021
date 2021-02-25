@@ -12,7 +12,7 @@
     font-size: 5em;
     justify-content: center;
     align-items: center;
-    animation: end-anim 3s forwards;
+    animation: end-anim 0s forwards;
     &__bar {
         display: flex;
         align-items: center;
@@ -47,5 +47,5 @@
 }
 
 .bloc_page {
-    animation: opacity-blocpage 3.1s forwards;
+    animation: opacity-blocpage 0s forwards;
 }

@@ -8,22 +8,29 @@
     align-items: center;
     &__logo {
         color: white;
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
-    &__restaurant i {
-        @include flex-justify-align-center();
-        & p {
-            padding-left: 10px;
+    &__restaurant {
+        font-weight: bold;
+        padding-top: 10px;
+        & i {
+            padding-right: 10px;
         }
     }
-    &__partenaire i {
-        @include flex-justify-align-center();
-        & p {
-            padding-left: 10px;
+    &__partenaire {
+        padding-top: 10px;
+        font-weight: bold;
+        & i {
+            padding-right: 10px;
         }
+    }
+    &__mention {
+        margin: 0px;
+        padding-top: 10px;
     }
     &__contact {
-        @include flex-justify-align-center();
+        margin: 0px;
+        padding-top: 10px;
     }
     & a {
         @include text_decoration(white);
