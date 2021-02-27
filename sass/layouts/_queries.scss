@@ -58,6 +58,21 @@
         &__figure {
             margin-bottom: 30px;
         }
+        & figure {
+            width: 325px;
+            & img {
+                width: 325px;
+            }
+            & figcaption {
+                width: 325px;
+                font-size: 1.2em;
+                height: 90px;
+            }
+            & .description__nom {
+                margin-bottom: -20px;
+                font-size: 1.1em;
+            }
+        }
     }
     .article-restaurant {
         width: 90%;

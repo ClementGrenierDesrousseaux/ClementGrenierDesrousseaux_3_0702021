@@ -232,6 +232,8 @@ header nav .bouton__interieur:hover i {
   margin: 0px;
 }
 .section figure {
+  display: flex;
+  flex-direction: column;
   width: 300px;
   margin: 0px;
 }
@@ -263,16 +265,18 @@ header nav .bouton__interieur:hover i {
   width: 300px;
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-radius: 0px 0px 20px 20px;
   background-color: white;
 }
 .section figure i {
   font-size: 1.5em;
+  padding-right: 20px;
 }
 .section figure .description {
   font-weight: 300;
+  padding-left: 20px;
 }
 .section figure .description__nom {
   font-weight: 800;
@@ -554,6 +558,21 @@ header nav .bouton__interieur:hover i {
   }
   .section__figure {
     margin-bottom: 30px;
+  }
+  .section figure {
+    width: 325px;
+  }
+  .section figure img {
+    width: 325px;
+  }
+  .section figure figcaption {
+    width: 325px;
+    font-size: 1.2em;
+    height: 90px;
+  }
+  .section figure .description__nom {
+    margin-bottom: -20px;
+    font-size: 1.1em;
   }
 
   .article-restaurant {
